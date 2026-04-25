@@ -1,141 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="stylehpcl.css">
-    <link rel="icon" href="unnamed.png" type="image/png">
-    <script src="hpcl.js"></script>
-</head>
-
+<html>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <ul>
-                    <li><a href="index45.html">QUALIFICATION</a></li>
-                </ul>
-                <li><a href="siteworks.html">PROFILE</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-        <h1>
-            Welcome to my Portfolio
-        </h1>
-    </header>
-    <section id="home" class="home">
-        <h2>Hi, I am Pavithran Chinnapaiyan</h2>
-        <p>I am a Junior Electrical Engineer with hands-on field experience since July, working on industrial electrical
-            systems. I have completed 6 months of specialized training in AutoCAD, PLC programming, and industrial power
-            & control circuits. Skilled in designing, troubleshooting, and implementing electrical systems, I am eager
-            to contribute my technical knowledge and practical experience to challenging projects in the electrical and
-            automation industry.</p>
-    </section>
-    <section class="skills-section">
-        <div class="skill">
-            <h3>Power Systems</h3>
-            <p>I work with electrical power systems, from generation to distribution. I’ve analyzed and optimized load
-                flow, designed circuits for energy efficiency, and used tools like MATLAB and ETAP for simulations that
-                ensure stability and reliability in grid operations.</p>
-        </div>
-        <div class="skill">
-            <h3>Embedded Systems</h3>
-            <p>I design and program embedded systems using microcontrollers like Arduino and PIC. My experience includes
-                building automation systems, sensor-based devices, and integrating IoT for real-world monitoring and
-                control applications.</p>
-        </div>
-        <div class="skill">
-            <h3>Circuit Design</h3>
-            <p>I create, simulate, and test both analog and digital circuits. Using software like Proteus and Multisim,
-                I can design PCBs, troubleshoot hardware issues, and develop solutions that are both functional and
-                cost-effective.</p>
-        </div>
-        <div class="skill">
-            <h3>Project Management</h3>
-            <p>I collaborate with peers and mentors to plan, execute, and deliver engineering projects. I focus on
-                efficient timelines, clear documentation, and aligning technical objectives with real-world
-                applications—whether academic or industry-based.</p>
-        </div>
-    </section>
 
+<script>
+function myStrictFunction() {
+  "use strict";
+  function nested() {
+    return "And so am I!";
+  }
+  return `Hi! I'm a strict mode function! ${nested()}`;
+}
 
+function myNotStrictFunction() {
+  return "I'm not strict.";
+}
 
-    <section class="me">
-        <h2 style="text-decoration: underline;">About Me</h2>
-        <p> I am a self-motivated and enthusiastic <strong>Electrical and Electronics Engineer</strong>
-            with strong fundamentals in <strong>power systems, IoT, automation, and embedded technologies</strong>.
-            My academic background and hands-on projects have given me practical knowledge in
-            <strong>testing, commissioning, and system design</strong>, especially in low, medium, and high voltage
-            applications.
-        </p>
-    </section>
+// Call functions
+alert(myStrictFunction());
+alert(myNotStrictFunction());
+</script>
 
-    <section>
-        <div>
-            <h2 style="text-align: left; text-decoration: underline;">Academic Projects</h2>
-        </div>
-
-        <section class="container">
-            <div class="project">
-                <h3>IoT-Based Solar Smart Monitoring</h3>
-                <p>Our advanced IoT Solar Smart Monitoring system ensures you get the most from your solar installation. Monitor performance, track energy production, and detect faults in real-time — all from a centralized dashboard.</p>
-                <p><ul>
-                    <li>Live data tracking of solar panel output</li>
-                    <li>Remote system diagnostics and alerts</li>
-                    <li>Predictive maintenance to reduce downtime</li>
-                </ul></p>
-            </div>
-            <div class="project">
-                <h3>LiFi Technology</h3>
-                <h4>Next-Generation Wireless Communication Through Light</h4>
-                <p>LiFi (Light Fidelity) is a cutting-edge wireless communication technology that uses LED light to transmit data at high speeds — offering a secure, fast, and interference-free alternative to traditional WiFi.</p>
-                <ul>
-                    <li>⚡ Ultra-fast data transmission</li>
-                    <li>🔒 Enhanced security (light doesn’t pass through walls)</li>
-                    <li>🌐 No radio interference — ideal for hospitals, airplanes, and industrial spaces</li>
-                    <li>🌱 Energy-efficient — dual use of lighting and communication</li>
-                </ul>
-            </div>
-        </section>
-        <section id="contact" class="contact">
-            <h2 style="font-family: 'Lora', serif;">CONTACT</h2>
-            <p style="text-align: center;">Gmail:<a href="mailto:pavithranchinnapaiyan@gmail.com">
-                <i class="fa-solid fa-envelope" style="font-size: 30px; color: #333;"></i>
-                pavithranchinnapaiyan@gmail.com</a></p>
-        </section>
-    </section>
-    <footer>
-        <p style="text-align: center;">&copy; 2025 Pavithran Chinnapaiyan</p>
-    </footer>
-    <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-    <script>
-        const elements = document.querySelectorAll('.fade-in');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        });
-
-        elements.forEach(el => observer.observe(el));
-
-    </script>
 </body>
-
 </html>

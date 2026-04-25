@@ -7,15 +7,15 @@
     --background-dark-95: #282828;
     --background-dark-80: #333333;
     --background-dark-70: #444444;
-    --background-dark-60: #aaaaaa;
-    --background-orange: #ff714a;
+    --background-dark-60: #e9e9e9;
+    --background-orange: #fffbfb;
 
     /*Text colors*/
-    --color-white-100: #ffffff;
-    --color-white-95: #f5f5f5;
-    --color-white-80: #d5d5d5;
+    --color-white-100: #131313;
+    --color-white-95:  #f8f7f7;
+    --color-white-80: #ffffff;
     --color-white-70: #444444;
-    --color-white-60: #aaaaaa;
+    --color-white-60: #f4f1f1;
 
     /*Font Size*/
     --font-size-48: 48px;
@@ -45,6 +45,33 @@
 ::-webkit-scrollbar-thumb {
     background: var(--background-orange);
 }
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(236, 235, 233);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
 
 /*RESET*/
 
@@ -53,6 +80,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 html {
     font-family: 'Lora', serif;
@@ -60,12 +92,14 @@ html {
 }
 
 body {
-
-    background: url(558222-sunset-electric-night-nature-wallpaper.jpg);
+    background-color: aliceblue;
     background: cover;
     background-attachment: fixed;
 }
-
+header{
+    padding: auto;
+    margin: 20px;
+}
 
 li {
     list-style: none;
@@ -145,17 +179,18 @@ img {
 }
 
 .container {
-    position: relative;
-    max-width: 2000px;
-    height: 100vh;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    width: 100%;
 }
 
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
+}
+.fade-in{
+    background-color: #000000;
 }
 
 .fade-in.show {
@@ -196,17 +231,6 @@ img {
     font-size: 12px;
     text-align: justify;
 }
-
-
-
-
-
-
-
-
-
-
-
 /*RESUME SECTION*/
 
 .resume {
@@ -356,7 +380,7 @@ img {
 }
 
 .resume {
-    padding: 80px 40px;
+    padding: 40px 40px;
 }
 
 

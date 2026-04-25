@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavithran Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="OIP.webp" type="image/png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="html3.html">ACADEMICS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="begin">
+        <section class="group">
+            <section id="home" class="home fade-in">
+                <h2>Hi, I am Pavithran Chinnapaiyan</h2>
+                <p>
+                    A Power System Electrical Design Engineer with over 1 year of experience in Control & Protection
+                    Panel
+                    design for substations (PPI-Nigeria, Voith Projects). I also have 4 months of experience in
+                    electrical
+                    equipment installation in distribution panels.
+                </p>
+                <p>
+                    I have working knowledge of Trip Matrix preparation and strong skills in designing engineering
+                    documents,
+                    panel wiring schematics, relay coordination, protection schemes, and interlocking logic. I am also
+                    eager
+                    to work in Testing & Commissioning with proper training.
+                </p>
+            </section>
+            <!-- ABOUT -->
+            <section class="me fade-in">
+                <h2>About Me</h2>
+                <p>
+                    I specialize in the detailed design and engineering of Secondary Systems for High Voltage (HV) and
+                    Extra
+                    High Voltage (EHV) substations. I bridge the gap between primary electrical systems and operational
+                    logic,
+                    ensuring reliability through strong protection schemes.
+                </p>
+            </section>
+            <section class="skills fade-in">
+                <h3 style="font-family: Arial, Helvetica, sans-serif;"> SKILLS</h3>
+                <ul>
+                    <li>
+                        Enginnering Base
+                    </li>
+                    <li>
+                        Electrical CAD
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section class="fade-in">
+            <h2>Work Experience</h2>
+
+            <div class="container">
+
+                <div class="project">
+                    <h3>MCore Technologies Pvt Ltd (June 2025 - Present)</h3>
+                    <ul>
+                        <li>Working as Power System Engineer under Siemens Energy deputation.</li>
+                        <li>Designing Control & Protection panels (400kV / 330kV / 132kV / 33kV).</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <h3>Roles & Responsibilities</h3>
+                    <ul>
+                        <li>Technical specification review for Control & Relay Panels.</li>
+                        <li>Preparation of Design Instruction Sheet and board formation.</li>
+                        <li>General Arrangement (GA) preparation.</li>
+                        <li>Bill of Material (BOM) & Trip Matrix preparation.</li>
+                        <li>Coordination of switchyard equipment with CRP panels.</li>
+                        <li>Schematic drawings for Busbar, Transformer, Line, Feeder panels.</li>
+                        <li>Panel wiring, inter-panel wiring, and bus wiring.</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <h3>Projects Handled</h3>
+                    <ul>
+                        <li>330kV / 132kV / 33kV AIS Substation – PPI Nigeria.</li>
+                        <li>400kV / 330kV / 132kV / 33kV AIS Substation – Voith Projects.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade-in">
+        <h2>Contact</h2>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:pavithranchinnapaiyan@gmail.com">
+                pavithranchinnapaiyan@gmail.com
+            </a>
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Pavithran Chinnapaiyan</p>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const elements = document.querySelectorAll('.fade');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');   // fade IN
+                    } else {
+                        entry.target.classList.remove('show'); // fade OUT
+                    }
+
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            elements.forEach(el => observer.observe(el));
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,56 +1,235 @@
-*{
-     margin: 0;
-     padding: 0;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav{
-    background-color: black;
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* ================= HEADER ================= */
+header {
+    margin: 10px;
+    border-radius: 10px;
+    background: #2c2c2c;
     color: white;
-    padding: 10px;
-    margin-left: 10px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-li,h1,ul{
-    display: inline;
-   
+
+/* Logo / Name */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
-ul{
-    margin-left: 60%;
+
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
-li{
-    color: grey;
-    cursor:pointer;
-}
-li:hover{
+
+nav ul li a {
     color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
 }
-input{
-    width: 60%;
-    padding: 15px;
+
+/* Hover underline animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: orange;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
-.searchbar{
-    padding: 25px;text-align: center;
+
+nav ul li a:hover::after {
+    width: 100%;
 }
-.box{
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    display: inline-block;
-    width: 220px;
-    margin-left: 15px;
-}
-.products{
-    text-align: center;
-}
-.box:hover{
-    color: blue;
-}
-.about{
-    text-align: center;
-    margin: 20px;
-    padding: 30px;
-}
-.contact{
-    background-color: black;
-    color: white;
-    text-align: center;
+
+/* ================= SECTIONS ================= */
+section {
     padding: 40px;
+}
+
+/* HEADINGS */
+h2 {
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+/* HOME */
+.group {
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.home {
+    background: white;
+    border-radius: 10px;
+}
+
+.me {
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.fade-in {
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.skills h3 {
+    text-decoration: underline;
+}
+
+.skills {
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* PROJECT CARDS */
+.project {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* LIST */
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    text-align: center;
+    background: #fff;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact i {
+    margin-right: 8px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #2c2c2c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ================= ANIMATION ================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.me fade-in {
+    padding-left: 25px;
+}
+
+.skills{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease-in-out;
+}
+.skills{
+    opacity: 1;
+    transform: translate(0);
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(18, 18, 18);
+    border-radius: 10px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(16, 16, 16);
+}
+
+.home,.me, .skills {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.home:hover, .me:hover, .skills:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section {
+        margin-left: 2%;
+    }
 }
